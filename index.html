@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criado por Gean Oliveira - PS3</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      max-width: 98vw;
+      width: 100%;
+      box-sizing: border-box;
+      word-break: break-word;
+    }
+    header h1, header h2, header p {
+      max-width: 100%;
+      word-break: break-word;
+      white-space: normal;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .tiktok-link {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff0050, #000000, #00f2ea);
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .tiktok-link:hover {
+      transform: scale(1.05);
+    }
+
+    .tiktok-container {
+      text-align: center;
+      margin: 60px 0 30px;
+    }
+
+    .pix-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .pix-button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      background-color: #00c896;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .pix-feedback {
+      margin-left: 10px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Servidor de GEAN OLIVEIRA</h1>
+      <h2>🎮 Doações para o projeto via Pix:</h2>
+      <div class="pix-container">
+        <p>
+          <strong>CHAVE:</strong> 
+          <span id="pix-chave">geansnswatch@gmail.com</span>
+          <button class="pix-button" onclick="copiarPix()">Copiar Pix</button>
+          <span id="copiado" class="pix-feedback">✅ Copiado!</span>
+        </p>
+      </div>
+      <p>GTA SA DREAMER v0.1 BETA - @gtasadreamer</p>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="arquivos/bombapatch2025.pkg" download>⬇️ BOMBA PATCH 100% Atualizado 2025(.PKG)</a>
+        </li>
+        <li><a href="iso.html">ISO</a></li>
+        <li><a href="pkg.html">PKG</a></li>
+        <li><a href="pasta.html">Pasta</a></li>
+        <li><a href="parapc.html">Programas para PC</a></li> 
+        <li><a href="servidorsony.html">Servidor Sony</a></li>   
+      </ul>
+    </nav>
+
+    <!-- TikTok Button -->
+    <div class="tiktok-container">
+      <a class="tiktok-link" href="https://www.tiktok.com/@gtasadreamer" target="_blank">
+        🔗 Siga no TikTok: @gtasadreamer
+      </a>
+    </div>
+  </div>
+
+  <!-- Script para copiar Pix -->
+  <script>
+    function copiarPix() {
+      const chave = document.getElementById("pix-chave").innerText;
+      navigator.clipboard.writeText(chave).then(() => {
+        const copiado = document.getElementById("copiado");
+        copiado.style.display = "inline";
+        setTimeout(() => {
+          copiado.style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
